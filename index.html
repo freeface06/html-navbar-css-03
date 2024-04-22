@@ -1,13 +1,20 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Page Title</title>
+    <title>navbar03</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='cocoder.css'>
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="navbar.css">
     <script src='main.js'></script>
 </head>
+
 <body>
     <div class="container">
         <nav>
@@ -30,5 +37,76 @@
             </div>
         </nav>
     </div>
+
+    <!--
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background-image: url('./assets/images/back1.png');"></div>
+            <div class="swiper-slide" style="background-image: url('./assets/images/back2.png');"></div>
+            <div class="swiper-slide" style="background-image: url('./assets/images/back3.png');"></div>
+            <div class="swiper-slide" style="background-image: url('./assets/images/back4.png');"></div>
+            <div class="swiper-slide" style="background-image: url('./assets/images/back5.png');"></div>
+            <div class="swiper-slide" style="background-image: url('./assets/images/back6.png');"></div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="autoplay-progress">
+            <svg viewBox="0 0 48 48">
+                <circle cx="24" cy="24" r="20"></circle>
+            </svg>
+            <span></span>
+        </div>
+    </div>
+    -->
+
+    <video muted="" autoplay="" loop="">
+        <source src="https://i.imgur.com/GqPmF4u.mp4" type="video/mp4">
+    </video>
+
+    <footer>
+        <div class="container">
+            <ul class="sns">
+                <li><a href="TwitterのプロフィールURL" class="snsbtn icon-twitter" target="_blank"
+                        rel="noopener noreferrer"></a></li>
+                <li><a href="FacebookページのURL" class="snsbtn icon-facebook" target="_blank"
+                        rel="noopener noreferrer"></a>
+                <li><a href="インスタのプロフィールURL" class="snsbtn icon-instagram" target="_blank"
+                        rel="noopener noreferrer"></a></li>
+                <li><a href="https://line.me/ti/p/%ライン＠のアカウント" class="snsbtn icon-line" target="_blank"
+                        rel="noopener noreferrer"></a>
+                <li><a href="youtubeのプロフィールURL" class="snsbtn icon-youtube" target="_blank"
+                        rel="noopener noreferrer"></a>
+                <li><a href="mailto:hoge@hoge.com?subject=件名" class="snsbtn icon-mail" target="_blank"
+                        rel="noopener noreferrer"></a></li>
+            </ul>
+        </div>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        const progressCircle = document.querySelector(".autoplay-progress svg");
+        const progressContent = document.querySelector(".autoplay-progress span");
+        var swiper = new Swiper(".mySwiper", {
+            centeredSlides: true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+                type: "progressbar",
+            },
+            on: {
+                autoplayTimeLeft(s, time, progress) {
+                    progressCircle.style.setProperty("--progress", 1 - progress);
+                    progressContent.textContent = `${Math.ceil(time / 1000)}`;
+                }
+            }
+        });
+    </script>
+
 </body>
+
 </html>
