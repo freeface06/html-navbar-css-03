@@ -1,11 +1,11 @@
 body {
     margin: 0;
     background-color: black;
-    height: 5000px;
 }
 
 video {
     width: 100%;
+    opacity: 0.9;
 }
 
 .swiper {

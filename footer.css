@@ -4,7 +4,7 @@ footer {
 
 .container {
     margin: auto;
-    width: 600px;
+    width: 100%;
 }
 
 .sns {
@@ -16,9 +16,8 @@ footer {
 
 .sns li {
     display: inline-block;
-
     background-color: black;
-    padding: 10px 20px;
+    padding: 1.5%;
     transition: all 0.15s;
 }
 
@@ -28,8 +27,8 @@ footer {
 
 .snsbtn {
     display: inline-block;
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
 }
 
 .icon-twitter {
