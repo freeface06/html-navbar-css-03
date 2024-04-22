@@ -21,14 +21,14 @@ footer {
     transition: all 0.15s;
 }
 
-.sns li a:hover {
+.sns li:hover {
     opacity: 0.5;
 }
 
 .snsbtn {
     display: inline-block;
-    width: 25px;
-    height: 25px;
+    width: 20px;
+    height: 20px;
 }
 
 .icon-twitter {
@@ -59,4 +59,68 @@ footer {
 .icon-mail {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='56' height='56' viewBox='0 0 56 56'%3e%3cg fill='none'%3e%3cpath d='M7 9h42.708a3 3 0 013 3v31.884a3 3 0 01-3 3H7a3 3 0 01-3-3V12a3 3 0 013-3z'/%3e%3cpath d='M8 13v29.884h40.708V13H8M7 9h42.708a3 3 0 013 3v31.884a3 3 0 01-3 3H7a3 3 0 01-3-3V12a3 3 0 013-3z' fill='%23585858'/%3e%3cpath d='M7.5 18.842l20.743 10.372 20.743-10.372' stroke='%23585858' stroke-linecap='square' stroke-linejoin='round' stroke-width='4'/%3e%3c/g%3e%3c/svg%3e");
     background-size: 100%;
+}
+
+.footer {
+    background: #000;
+    padding: 30px 0px;
+    font-family: 'Play', sans-serif;
+    text-align: center;
+}
+
+.footer .row {
+    width: 100%;
+    margin: 1% 0%;
+    padding: 0.6% 0%;
+    color: gray;
+    font-size: 0.8em;
+}
+
+.footer .row a {
+    text-decoration: none;
+    color: gray;
+    transition: 0.5s;
+}
+
+.footer .row a:hover {
+    color: #fff;
+}
+
+.footer .row ul {
+    width: 50%;
+    margin: auto;
+}
+
+.footer .row ul li {
+    display: inline-block;
+}
+
+.footer .row a i {
+    font-size: 2em;
+    margin: 0% 1%;
+}
+
+@media (max-width:720px) {
+    .footer {
+        text-align: left;
+        padding: 5%;
+    }
+
+    .footer .sns {
+        text-align: center;
+    }
+
+    .footer .row ul {
+        width: 100% !important;
+    }
+
+    .footer .row ul li {
+        display: block;
+        margin: 5px 0px;
+        text-align: left;
+    }
+
+    .footer .row a i {
+        margin: 0% 3%;
+    }
 }

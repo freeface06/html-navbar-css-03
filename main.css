@@ -68,3 +68,9 @@ video {
     top: auto !important;
     bottom: 0 !important;
 }
+
+@media screen and (max-width: 864px) {
+    video {
+        height: 60vh;
+    }
+}
